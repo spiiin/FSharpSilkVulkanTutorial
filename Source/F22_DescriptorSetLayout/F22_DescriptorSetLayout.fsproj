@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="FSharp.Core" />
+		<PackageReference Include="Silk.NET" />
+		<PackageReference Include="Silk.NET.Vulkan.Extensions.EXT" />
+	</ItemGroup>
+	<ItemGroup>
+	  <FragmentShader Remove="22_shader_ubo.frag" />
+	</ItemGroup>
+	<ItemGroup>
+	  <VertexShader Remove="22_shader_ubo.vert" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Include="22_shader_ubo.frag" />
+	  <None Include="22_shader_ubo.vert" />
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="Program.fs" />
+		<Content Include="../../Assets/viking_room.png" Link="viking_room.png">
+			  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="../../Assets/viking_room.obj" Link="viking_room.obj">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<PackageReference Include="FSharp.Core" />
+		<PackageReference Include="Silk.NET" />
+		<PackageReference Include="Silk.NET.Assimp" />
+		<PackageReference Include="Silk.NET.Vulkan.Extensions.EXT" />
+		<PackageReference Include="SixLabors.ImageSharp" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<VertexShader Include="../F27_DepthBuffering/**/*.vert" />
+		<FragmentShader Include="../F27_DepthBuffering/**/*.frag" />
+	</ItemGroup>
+
+</Project>

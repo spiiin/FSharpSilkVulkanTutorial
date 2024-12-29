@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="FSharp.Core" />
+		<PackageReference Include="Silk.NET" />
+		<PackageReference Include="Silk.NET.Vulkan.Extensions.EXT" />
+		<PackageReference Include="SixLabors.ImageSharp" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<VertexShader Include="../F22_DescriptorSetLayout/**/*.vert" />
+		<FragmentShader Include="../F22_DescriptorSetLayout/**/*.frag" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="../../Assets/texture.jpg" Link="texture.jpg">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+</Project>
